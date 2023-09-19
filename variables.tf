@@ -3,6 +3,7 @@ variable "application_name" {
   description = "Application Name"
   default     = "beacon"
 }
+
 variable "tfc_org" {
   type        = string
   description = "LYSETTE_ORG2"
