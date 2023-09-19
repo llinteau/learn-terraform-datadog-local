@@ -11,7 +11,7 @@ variable "tfc_org" {
 
 variable "tfc_workspace" {
   type        = string
-  description = "TFC Workspace"
+  description = "learn-terraform-eks"
   default     = "learn-terraform-eks"
 }
 
