@@ -6,7 +6,7 @@ variable "application_name" {
 
 variable "tfc_org" {
   type        = string
-  description = "LYSETTE_ORG2"
+  description = "TFC Organization"
 }
 
 variable "tfc_workspace" {
