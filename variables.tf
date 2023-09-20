@@ -4,3 +4,14 @@ variable "application_name" {
   default     = "beacon"
 }
 
+variable "tfc_org" {
+  type        = string
+  description = "TFC Organization"
+}
+
+variable "tfc_workspace" {
+  type        = string
+  description = "TFC Workspace"
+  default     = "learn-terraform-eks"
+}
+
