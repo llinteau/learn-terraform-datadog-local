@@ -7,6 +7,7 @@ variable "application_name" {
 variable "tfc_org" {
   type        = string
   description = "LYSETTE_ORG2"
+  default     = "LYSETTE_ORG2"
 }
 
 variable "tfc_workspace" {
