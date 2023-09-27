@@ -6,13 +6,12 @@ variable "application_name" {
 
 variable "tfc_org" {
   type        = string
-  description = "LYSETTE_ORG2"
-  default     = "LYSETTE_ORG2"
+  description = "TFC Workspace"
 }
 
 variable "tfc_workspace" {
   type        = string
-  description = "learn-terraform-eks"
+  description = "TFC Workspace"
   default     = "learn-terraform-eks"
 }
 
