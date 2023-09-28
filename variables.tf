@@ -34,12 +34,10 @@ variable "datadog_site" {
   type        = string
   description = "Datadog Location"
   default     = "datadoghq.com"
-  sensitive   = true
 }
 
 variable "datadog_api_url" {
   type        = string
   description = "Datadog Location URL"
   default     = "https://app.datadoghq.com"
-  sensitive   = true
 }
