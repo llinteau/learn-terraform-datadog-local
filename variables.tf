@@ -29,3 +29,17 @@ variable "datadog_api_key" {
   default     = "fc593c8b14565b9af00479084df18f14"
   sensitive   = true
 }
+
+variable "datadog_site" {
+  type        = string
+  description = "Datadog Location"
+  default     = "datadoghq.com"
+  sensitive   = true
+}
+
+variable "datadog_api_url" {
+  type        = string
+  description = "Datadog Location URL"
+  default     = "https://app.datadoghq.com"
+  sensitive   = true
+}
