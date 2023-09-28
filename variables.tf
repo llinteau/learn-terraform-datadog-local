@@ -16,28 +16,24 @@ variable "tfc_workspace" {
   default     = "learn-terraform-eks"
 }
 
-variable "datadog_app_key" {
-  type        = string
-  description = "Datadog demo app key"
-  default     = "a76c1fe09502e50d77b668625c223f956b457c29"
-  sensitive   = true
-}
-
 variable "datadog_api_key" {
   type        = string
-  description = "Datadog demo api key"
-  default     = "fc593c8b14565b9af00479084df18f14"
-  sensitive   = true
+  description = "Datadog API Key"
+}
+
+variable "datadog_app_key" {
+  type        = string
+  description = "Datadog Application Key"
 }
 
 variable "datadog_site" {
   type        = string
-  description = "Datadog Location"
+  description = "Datadog Site Parameter"
   default     = "datadoghq.com"
 }
 
 variable "datadog_api_url" {
   type        = string
-  description = "Datadog Location URL"
-  default     = "https://app.datadoghq.com"
+  description = "Datadog API URL"
+  default     = "https://api.datadoghq.com"
 }
