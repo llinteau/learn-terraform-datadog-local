@@ -4,7 +4,7 @@ resource "datadog_synthetics_test" "beacon" {
 
   request_definition {
     method = "GET"
-    url    = "http://<Host_URL>"
+    url    = "http://a461624b0b190493aaf9ef94ac9ab2b7-1318968685.us-east-2.elb.amazonaws.com:8080"
   }
 
   assertion {
