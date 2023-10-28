@@ -8,7 +8,7 @@ resource "helm_release" "datadog_agent" {
   name       = "datadog-agent"
   chart      = "datadog"
   repository = "https://helm.datadoghq.com"
-  version    = "3.10.9"
+  version    = "3.42.1"
   namespace  = kubernetes_namespace.beacon.id
 
   set_sensitive {
