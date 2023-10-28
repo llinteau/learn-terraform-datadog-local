@@ -70,5 +70,9 @@ resource "helm_release" "datadog_agent" {
     name  = "datadog.hostVolumeMountPropagation"
     value = "HostToContainer"
   }
+
+  set {
+    name  = "datadog.serviceMonitoring.enabled"
+    value =  true
 }
 

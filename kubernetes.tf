@@ -18,7 +18,6 @@ data "terraform_remote_state" "eks" {
 }
 */
 
-
 # Retrieve EKS cluster configuration
 data "aws_eks_cluster" "cluster" {
   /* Uncomment when using Terraform OSS
