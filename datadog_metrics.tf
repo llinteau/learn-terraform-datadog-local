@@ -21,5 +21,5 @@ resource "datadog_monitor" "beacon" {
 
   notify_no_data = true
 
-  tags = ["app:beacon", "env:demo"]
+  tags = ["app:beacon", "env:demo", "cost-usage:lysette-personal"]
 }

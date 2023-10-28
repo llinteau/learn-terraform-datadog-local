@@ -19,9 +19,9 @@ resource "datadog_synthetics_test" "beacon" {
     min_location_failed = 1
   }
 
-  name    = "Beacon API Check"
-  message = "Oh no! Light from the Beacon app is no longer shining!"
-  tags    = ["app:beacon", "env:demo"]
+  name    = "Lysettes Education EKS Beacon API Check"
+  message = "Oh no! Light from Lysettes Beacon app is no longer shining!"
+  tags    = ["app:beacon", "env:demo", "cost-usage:lysette-personal"]
 
   status = "live"
 }
