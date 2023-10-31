@@ -27,6 +27,11 @@ resource "helm_release" "datadog_agent" {
   }
 
   set {
+    name  = "datadog.apm.portEnabled"
+    value = true
+  }
+
+  set {
     name  = "datadog.logs.containerCollectAll"
     value = true
   }
