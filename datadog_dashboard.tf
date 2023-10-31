@@ -1,6 +1,6 @@
 
 resource "datadog_dashboard" "beacon" {
-  title       = "Beacon Service"
+  title       = "♥Lysettes Beacon Service♥"
   description = "A Datadog Dashboard for the ${kubernetes_deployment.beacon.metadata[0].name} deployment"
   layout_type = "ordered"
 
