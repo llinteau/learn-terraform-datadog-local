@@ -19,7 +19,7 @@ resource "datadog_synthetics_test" "beacon" {
     min_location_failed = 1
   }
 
-  name    = "Lysettes Education EKS Beacon API Check"
+  name    = "♥ CSVD - EOB - EMS - Lysettes Personal LAB EKS Beacon API Check via Terraform ♥"
   message = "Oh no! Light from Lysettes Beacon app is no longer shining!"
   tags    = ["app:beacon", "env:demo", "cost-usage:lysette-personal"]
 

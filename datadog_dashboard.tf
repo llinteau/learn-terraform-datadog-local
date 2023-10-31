@@ -1,6 +1,6 @@
 
 resource "datadog_dashboard" "beacon" {
-  title       = "♥Lysettes Beacon Service♥"
+  title       = "♥ CSVD - EOB - EMS - Lysettes Beacon Service Dashboard Made via Terraform ♥"
   description = "A Datadog Dashboard for the ${kubernetes_deployment.beacon.metadata[0].name} deployment"
   layout_type = "ordered"
 
