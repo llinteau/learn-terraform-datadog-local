@@ -57,7 +57,7 @@ resource "helm_release" "datadog_agent" {
   }
 
   set {
-    name  = "networkMonitoring.enabled"
+    name  = "datadog.networkMonitoring.enabled"
     value = true
   }
 
