@@ -131,19 +131,18 @@ resource "helm_release" "datadog_agent" {
     value =  true
   }
 
-   set {
+  set {
     name  = "clusterAgent.admissionController.mutateUnlabelled"
     value =  false
   }
 
-   set {
+  set {
     name  = "agents.useConfigMap"
     value =  true
   }
 
-   set {
+  set {
     name  = "agents.customAgentConfig"
     value =  true
   }
-
 }
