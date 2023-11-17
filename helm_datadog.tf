@@ -10,7 +10,7 @@ resource "helm_release" "datadog_agent" {
   repository = "https://helm.datadoghq.com"
   version    = "3.10.9"
   namespace  = kubernetes_namespace.beacon.id
-
+  
   set_sensitive {
     name  = "datadog.apiKey"
     value = var.datadog_api_key
@@ -101,10 +101,24 @@ resource "helm_release" "datadog_agent" {
     value = true
   }
 
+
+## ref: https://docs.datadoghq.com/agent/kubernetes/dogstatsd/
+## To emit custom metrics from your Kubernetes application, use DogStatsD.
+  set {
+    name  = "datadog.dogstatsd.port"
+    value = "8125"
+  }
+
 # Sets the hostPort to the same value of the container port
   set {
     name  = "datadog.dogstatsd.useHostPort"
     value = true
+  }
+
+
+  set {
+    name  = "datadog.dogstatsd.nonLocalTraffic"
+    value = "true"
   }
 
 # Enable the TCP queue length eBPF-based check

@@ -1,3 +1,9 @@
+variable "datadog_helm_version" {
+  type        = string
+  description = "Helm chart version for Datadog"
+  default     = "3.1.3"
+}
+
 variable "application_name" {
   type        = string
   description = "Application Name"
