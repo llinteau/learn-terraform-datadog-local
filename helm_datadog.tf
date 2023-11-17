@@ -21,7 +21,7 @@ resource "helm_release" "datadog_agent" {
     value = var.datadog_site
   }
 
-   set {
+  set {
     name  = "fips.enabled"
     value =  true
   }
