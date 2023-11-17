@@ -6,7 +6,7 @@ provider "datadog" {
 }
 
 resource "datadog_monitor" "beacon" {
-  name               = "CSVD - EOB - EMS - Datadog Admin - Lysettes Lab Kubernetes Pod Health Monitor via Terraform ♥"
+  name               = "CSVD - EOB - EMS - Datadog Admin - Metric Monitor - Kubernetes Pod Health Monitor - Made via Terraform ♥"
   type               = "metric alert"
   message            = "Kubernetes Pods are not in an optimal health state. Notify: @operator"
   escalation_message = "Please investigate the Kubernetes Pods, @operator"
