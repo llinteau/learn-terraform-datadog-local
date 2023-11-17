@@ -8,7 +8,7 @@ resource "helm_release" "datadog_agent" {
   name       = "datadog-agent"
   chart      = "datadog"
   repository = "https://helm.datadoghq.com"
-  version    = "3.49.0"
+  version    = "3.10.9"
   namespace  = kubernetes_namespace.beacon.id
 
   set_sensitive {
@@ -22,16 +22,16 @@ resource "helm_release" "datadog_agent" {
   }
 
 #  FIPS provides encryption. This is mandatory for ATO
-  set {
-    name  = "fips.enabled"
-    value =  true
-  }
+#  set {
+#    name  = "fips.enabled"
+#    value =  true
+#  }
 
 #  FIPS provides encryption. This is mandatory for ATO
-  set {
-    name  = "fips.use_https"
-    value =  false
-  }
+#  set {
+#    name  = "fips.use_https"
+#    value =  false
+#  }
 
 #  Logs are not allowed now but will be considered later. 
   set {
