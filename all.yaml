@@ -1,0 +1,5191 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2023-10-31T09:49:39Z"
+    generateName: beacon-cf7447586-
+    labels:
+      app: beacon
+      pod-template-hash: cf7447586
+    name: beacon-cf7447586-mwr62
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: beacon-cf7447586
+      uid: e85f44fb-ee9f-406e-b2a4-9ca149312bae
+    resourceVersion: "985363"
+    uid: a5dfd2bb-61b2-494d-b0db-ca88c41fba1e
+  spec:
+    automountServiceAccountToken: true
+    containers:
+    - image: onlydole/beacon:datadog
+      imagePullPolicy: IfNotPresent
+      name: beacon
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-kp9wl
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: ip-10-0-2-81.us-east-2.compute.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    shareProcessNamespace: false
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-kp9wl
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:43Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:43Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://ee3f1af6b73244528412dd6dfada2630ccb0135d87cba00a8047dbb676c385e5
+      image: docker.io/onlydole/beacon:datadog
+      imageID: docker.io/onlydole/beacon@sha256:671f63fa224efd800e2815f766302dfb0dcf36634decdd18770274fc8152d02e
+      lastState: {}
+      name: beacon
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T09:49:42Z"
+    hostIP: 10.0.2.81
+    phase: Running
+    podIP: 10.0.2.40
+    podIPs:
+    - ip: 10.0.2.40
+    qosClass: BestEffort
+    startTime: "2023-10-31T09:49:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2023-10-31T09:49:39Z"
+    generateName: beacon-cf7447586-
+    labels:
+      app: beacon
+      pod-template-hash: cf7447586
+    name: beacon-cf7447586-xghvf
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: beacon-cf7447586
+      uid: e85f44fb-ee9f-406e-b2a4-9ca149312bae
+    resourceVersion: "985374"
+    uid: 82de9b99-98ec-423c-b888-8a851a0363cf
+  spec:
+    automountServiceAccountToken: true
+    containers:
+    - image: onlydole/beacon:datadog
+      imagePullPolicy: IfNotPresent
+      name: beacon
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-thjt9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: ip-10-0-3-22.us-east-2.compute.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    shareProcessNamespace: false
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-thjt9
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:44Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:44Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T09:49:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://f65519f4ba62c9f5e6eb315b2ae126f419e07db96075adcee40a0c3c6a7101b0
+      image: docker.io/onlydole/beacon:datadog
+      imageID: docker.io/onlydole/beacon@sha256:671f63fa224efd800e2815f766302dfb0dcf36634decdd18770274fc8152d02e
+      lastState: {}
+      name: beacon
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T09:49:43Z"
+    hostIP: 10.0.3.22
+    phase: Running
+    podIP: 10.0.3.198
+    podIPs:
+    - ip: 10.0.3.198
+    qosClass: BestEffort
+    startTime: "2023-10-31T09:49:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2023-11-15T17:24:55Z"
+    generateName: beacon-cf7447586-
+    labels:
+      app: beacon
+      pod-template-hash: cf7447586
+    name: beacon-cf7447586-zmvtn
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: beacon-cf7447586
+      uid: e85f44fb-ee9f-406e-b2a4-9ca149312bae
+    resourceVersion: "5561052"
+    uid: c6ee0d92-c9e2-4392-87e1-6ec9eed35be9
+  spec:
+    automountServiceAccountToken: true
+    containers:
+    - image: onlydole/beacon:datadog
+      imagePullPolicy: IfNotPresent
+      name: beacon
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-hv9xf
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: ip-10-0-2-81.us-east-2.compute.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    shareProcessNamespace: false
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-hv9xf
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:24:55Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:24:57Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:24:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:24:55Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://b73ac666fd59e2d0ccbae4d848e8fafa4c70dbe4e5fc45f0a72a8b59b492d752
+      image: docker.io/onlydole/beacon:datadog
+      imageID: docker.io/onlydole/beacon@sha256:671f63fa224efd800e2815f766302dfb0dcf36634decdd18770274fc8152d02e
+      lastState: {}
+      name: beacon
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-11-15T17:24:56Z"
+    hostIP: 10.0.2.81
+    phase: Running
+    podIP: 10.0.2.41
+    podIPs:
+    - ip: 10.0.2.41
+    qosClass: BestEffort
+    startTime: "2023-11-15T17:24:55Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+      checksum/autoconf-config: 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b
+      checksum/checksd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/clusteragent_token: 34bf7f7454f8a08fab4c971a6f739b7fb9c2f905fe8c665d25493051f962ae37
+      checksum/confd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+      container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
+    creationTimestamp: "2023-10-31T20:41:51Z"
+    generateName: datadog-agent-
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/component: agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      controller-revision-hash: 66674df9f
+      pod-template-generation: "2"
+    name: datadog-agent-59klb
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: datadog-agent
+      uid: 3be3f652-68e1-4375-94c2-399cb74a7971
+    resourceVersion: "1121000"
+    uid: 89b4faab-d32e-48b0-8b37-be5ea3112b02
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-2-81.us-east-2.compute.internal
+    automountServiceAccountToken: true
+    containers:
+    - command:
+      - agent
+      - run
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_DOGSTATSD_PORT
+        value: "8125"
+      - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_DOGSTATSD_TAG_CARDINALITY
+        value: low
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_APM_ENABLED
+        value: "false"
+      - name: DD_LOGS_ENABLED
+        value: "true"
+      - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+        value: "true"
+      - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+        value: "true"
+      - name: DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION
+        value: "false"
+      - name: DD_HEALTH_PORT
+        value: "5555"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_EXTRA_CONFIG_PROVIDERS
+        value: clusterchecks endpointschecks
+      - name: DD_IGNORE_AUTOCONF
+        value: kubernetes_state
+      - name: DD_CONTAINER_LIFECYCLE_ENABLED
+        value: "true"
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      - name: DD_EXPVAR_PORT
+        value: "6000"
+      - name: DD_COMPLIANCE_CONFIG_ENABLED
+        value: "false"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /live
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: agent
+      ports:
+      - containerPort: 8125
+        name: dogstatsdport
+        protocol: UDP
+      readinessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /ready
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/install_info
+        name: installinfo
+        readOnly: true
+        subPath: install_info
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /opt/datadog-agent/run
+        mountPropagation: HostToContainer
+        name: pointerdir
+      - mountPath: /var/log/pods
+        mountPropagation: HostToContainer
+        name: logpodpath
+        readOnly: true
+      - mountPath: /var/log/containers
+        mountPropagation: HostToContainer
+        name: logscontainerspath
+        readOnly: true
+      - mountPath: /var/lib/docker/containers
+        mountPropagation: HostToContainer
+        name: logdockercontainerpath
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    - command:
+      - trace-agent
+      - -config=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_APM_ENABLED
+        value: "true"
+      - name: DD_APM_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_APM_RECEIVER_PORT
+        value: "8126"
+      - name: DD_APM_RECEIVER_SOCKET
+        value: /var/run/datadog/apm.socket
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        tcpSocket:
+          port: 8126
+        timeoutSeconds: 5
+      name: trace-agent
+      ports:
+      - containerPort: 8126
+        hostPort: 8126
+        name: traceport
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    - command:
+      - process-agent
+      - --cfgpath=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_PROCESS_AGENT_DISCOVERY_ENABLED
+        value: "true"
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_SYSTEM_PROBE_ENABLED
+        value: "false"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: process-agent
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /etc/passwd
+        name: passwd
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    - command:
+      - /opt/datadog-agent/embedded/bin/system-probe
+      - --config=/etc/datadog-agent/system-probe.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: HOST_ROOT
+        value: /host/root
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: system-probe
+      resources: {}
+      securityContext:
+        capabilities:
+          add:
+          - SYS_ADMIN
+          - SYS_RESOURCE
+          - SYS_PTRACE
+          - NET_ADMIN
+          - NET_BROADCAST
+          - NET_RAW
+          - IPC_LOCK
+          - CHOWN
+          - DAC_READ_SEARCH
+        privileged: false
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /sys/kernel/debug
+        mountPropagation: HostToContainer
+        name: debugfs
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/etc/redhat-release
+        name: etc-redhat-release
+        readOnly: true
+      - mountPath: /host/etc/fedora-release
+        name: etc-fedora-release
+        readOnly: true
+      - mountPath: /host/etc/lsb-release
+        name: etc-lsb-release
+        readOnly: true
+      - mountPath: /host/root
+        mountPropagation: HostToContainer
+        name: hostroot
+        readOnly: true
+      - mountPath: /lib/modules
+        mountPropagation: HostToContainer
+        name: modules
+        readOnly: true
+      - mountPath: /usr/src
+        mountPropagation: HostToContainer
+        name: src
+        readOnly: true
+      - mountPath: /var/tmp/datadog-agent/system-probe/build
+        mountPropagation: HostToContainer
+        name: runtime-compiler-output-dir
+      - mountPath: /var/tmp/datadog-agent/system-probe/kernel-headers
+        name: kernel-headers-download-dir
+      - mountPath: /host/etc/apt
+        name: apt-config-dir
+        readOnly: true
+      - mountPath: /host/etc/yum.repos.d
+        name: yum-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/zypp
+        name: opensuse-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/pki
+        name: public-key-dir
+        readOnly: true
+      - mountPath: /host/etc/yum/vars
+        name: yum-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/dnf/vars
+        name: dnf-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/rhsm
+        name: rhel-subscription-dir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostPID: true
+    initContainers:
+    - args:
+      - cp -r /etc/datadog-agent /opt
+      command:
+      - bash
+      - -c
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-volume
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/datadog-agent
+        name: config
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    - args:
+      - for script in $(find /etc/cont-init.d/ -type f -name '*.sh' | sort) ; do bash
+        $script ; done
+      command:
+      - bash
+      - -c
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-config
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    - command:
+      - cp
+      - /etc/config/system-probe-seccomp.json
+      - /host/var/lib/kubelet/seccomp/system-probe
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: seccomp-setup
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/config
+        name: datadog-agent-security
+        readOnly: true
+      - mountPath: /host/var/lib/kubelet/seccomp
+        mountPropagation: HostToContainer
+        name: seccomp-root
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4wvv7
+        readOnly: true
+    nodeName: ip-10-0-2-81.us-east-2.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsUser: 0
+    serviceAccount: datadog-agent
+    serviceAccountName: datadog-agent
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: auth-token
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-installinfo
+      name: installinfo
+    - emptyDir: {}
+      name: config
+    - emptyDir: {}
+      name: logdatadog
+    - emptyDir: {}
+      name: tmpdir
+    - hostPath:
+        path: /proc
+        type: ""
+      name: procdir
+    - hostPath:
+        path: /sys/fs/cgroup
+        type: ""
+      name: cgroups
+    - hostPath:
+        path: /etc/os-release
+        type: ""
+      name: os-release-file
+    - hostPath:
+        path: /etc/redhat-release
+        type: ""
+      name: etc-redhat-release
+    - hostPath:
+        path: /etc/fedora-release
+        type: ""
+      name: etc-fedora-release
+    - hostPath:
+        path: /etc/lsb-release
+        type: ""
+      name: etc-lsb-release
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: dsdsocket
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: apmsocket
+    - emptyDir: {}
+      name: s6-run
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-system-probe-config
+      name: sysprobe-config
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-security
+      name: datadog-agent-security
+    - hostPath:
+        path: /var/lib/kubelet/seccomp
+        type: ""
+      name: seccomp-root
+    - hostPath:
+        path: /sys/kernel/debug
+        type: ""
+      name: debugfs
+    - emptyDir: {}
+      name: sysprobe-socket-dir
+    - hostPath:
+        path: /lib/modules
+        type: ""
+      name: modules
+    - hostPath:
+        path: /usr/src
+        type: ""
+      name: src
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/build
+        type: DirectoryOrCreate
+      name: runtime-compiler-output-dir
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/kernel-headers
+        type: DirectoryOrCreate
+      name: kernel-headers-download-dir
+    - hostPath:
+        path: /etc/apt
+        type: ""
+      name: apt-config-dir
+    - hostPath:
+        path: /etc/yum.repos.d
+        type: ""
+      name: yum-repos-dir
+    - hostPath:
+        path: /etc/zypp
+        type: ""
+      name: opensuse-repos-dir
+    - hostPath:
+        path: /etc/pki
+        type: ""
+      name: public-key-dir
+    - hostPath:
+        path: /etc/yum/vars
+        type: ""
+      name: yum-vars-dir
+    - hostPath:
+        path: /etc/dnf/vars
+        type: ""
+      name: dnf-vars-dir
+    - hostPath:
+        path: /etc/rhsm
+        type: ""
+      name: rhel-subscription-dir
+    - hostPath:
+        path: /etc/passwd
+        type: ""
+      name: passwd
+    - hostPath:
+        path: /
+        type: ""
+      name: hostroot
+    - hostPath:
+        path: /var/lib/datadog-agent/logs
+        type: ""
+      name: pointerdir
+    - hostPath:
+        path: /var/log/pods
+        type: ""
+      name: logpodpath
+    - hostPath:
+        path: /var/log/containers
+        type: ""
+      name: logscontainerspath
+    - hostPath:
+        path: /var/lib/docker/containers
+        type: ""
+      name: logdockercontainerpath
+    - hostPath:
+        path: /var/run
+        type: ""
+      name: runtimesocketdir
+    - name: kube-api-access-4wvv7
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:41:56Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:22Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:22Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:41:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://7c8e7833d4b94634482eda4ecadffee3197b8d09c4e32ed2f6316120cfce77bd
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:41:56Z"
+    - containerID: containerd://2235620b8030b312c3a344010419939fd5c226c7fb0ad4928d9275156a29a3af
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: process-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:41:57Z"
+    - containerID: containerd://63d817c8663596930e4f5452373a26cac2b69f8c5459d485371072a09af17d12
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: system-probe
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:41:57Z"
+    - containerID: containerd://70d59f4b8409375bc7872efe5ea21ea814c3600dc643a561cfd3782840961c5f
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: trace-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:41:56Z"
+    hostIP: 10.0.2.81
+    initContainerStatuses:
+    - containerID: containerd://672ef3a4aadb342c287acf23e77d4b36156c743363c64c7babfc978c89ba4941
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-volume
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://672ef3a4aadb342c287acf23e77d4b36156c743363c64c7babfc978c89ba4941
+          exitCode: 0
+          finishedAt: "2023-10-31T20:41:53Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:41:53Z"
+    - containerID: containerd://604e5cea683564a1a4a88322d3a1325d54862abe2f0572b271af51efd68d66db
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-config
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://604e5cea683564a1a4a88322d3a1325d54862abe2f0572b271af51efd68d66db
+          exitCode: 0
+          finishedAt: "2023-10-31T20:41:54Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:41:54Z"
+    - containerID: containerd://7bf05aa602bd8fd71fc53ecf4c17ccbbfe3edd972a284f22bc5291fd02c695b2
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: seccomp-setup
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://7bf05aa602bd8fd71fc53ecf4c17ccbbfe3edd972a284f22bc5291fd02c695b2
+          exitCode: 0
+          finishedAt: "2023-10-31T20:41:55Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:41:55Z"
+    phase: Running
+    podIP: 10.0.2.10
+    podIPs:
+    - ip: 10.0.2.10
+    qosClass: BestEffort
+    startTime: "2023-10-31T20:41:52Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+      checksum/autoconf-config: 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b
+      checksum/checksd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/clusteragent_token: 34bf7f7454f8a08fab4c971a6f739b7fb9c2f905fe8c665d25493051f962ae37
+      checksum/confd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+      container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
+    creationTimestamp: "2023-11-15T17:25:33Z"
+    generateName: datadog-agent-
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/component: agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      controller-revision-hash: 66674df9f
+      pod-template-generation: "2"
+    name: datadog-agent-6nt2m
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: datadog-agent
+      uid: 3be3f652-68e1-4375-94c2-399cb74a7971
+    resourceVersion: "5561457"
+    uid: 29c4f39c-558f-40f2-9f71-f5edd1af5150
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-2-152.us-east-2.compute.internal
+    automountServiceAccountToken: true
+    containers:
+    - command:
+      - agent
+      - run
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_DOGSTATSD_PORT
+        value: "8125"
+      - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_DOGSTATSD_TAG_CARDINALITY
+        value: low
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_APM_ENABLED
+        value: "false"
+      - name: DD_LOGS_ENABLED
+        value: "true"
+      - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+        value: "true"
+      - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+        value: "true"
+      - name: DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION
+        value: "false"
+      - name: DD_HEALTH_PORT
+        value: "5555"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_EXTRA_CONFIG_PROVIDERS
+        value: clusterchecks endpointschecks
+      - name: DD_IGNORE_AUTOCONF
+        value: kubernetes_state
+      - name: DD_CONTAINER_LIFECYCLE_ENABLED
+        value: "true"
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      - name: DD_EXPVAR_PORT
+        value: "6000"
+      - name: DD_COMPLIANCE_CONFIG_ENABLED
+        value: "false"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /live
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: agent
+      ports:
+      - containerPort: 8125
+        name: dogstatsdport
+        protocol: UDP
+      readinessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /ready
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/install_info
+        name: installinfo
+        readOnly: true
+        subPath: install_info
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /opt/datadog-agent/run
+        mountPropagation: HostToContainer
+        name: pointerdir
+      - mountPath: /var/log/pods
+        mountPropagation: HostToContainer
+        name: logpodpath
+        readOnly: true
+      - mountPath: /var/log/containers
+        mountPropagation: HostToContainer
+        name: logscontainerspath
+        readOnly: true
+      - mountPath: /var/lib/docker/containers
+        mountPropagation: HostToContainer
+        name: logdockercontainerpath
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    - command:
+      - trace-agent
+      - -config=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_APM_ENABLED
+        value: "true"
+      - name: DD_APM_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_APM_RECEIVER_PORT
+        value: "8126"
+      - name: DD_APM_RECEIVER_SOCKET
+        value: /var/run/datadog/apm.socket
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        tcpSocket:
+          port: 8126
+        timeoutSeconds: 5
+      name: trace-agent
+      ports:
+      - containerPort: 8126
+        hostPort: 8126
+        name: traceport
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    - command:
+      - process-agent
+      - --cfgpath=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_PROCESS_AGENT_DISCOVERY_ENABLED
+        value: "true"
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_SYSTEM_PROBE_ENABLED
+        value: "false"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: process-agent
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /etc/passwd
+        name: passwd
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    - command:
+      - /opt/datadog-agent/embedded/bin/system-probe
+      - --config=/etc/datadog-agent/system-probe.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: HOST_ROOT
+        value: /host/root
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: system-probe
+      resources: {}
+      securityContext:
+        capabilities:
+          add:
+          - SYS_ADMIN
+          - SYS_RESOURCE
+          - SYS_PTRACE
+          - NET_ADMIN
+          - NET_BROADCAST
+          - NET_RAW
+          - IPC_LOCK
+          - CHOWN
+          - DAC_READ_SEARCH
+        privileged: false
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /sys/kernel/debug
+        mountPropagation: HostToContainer
+        name: debugfs
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/etc/redhat-release
+        name: etc-redhat-release
+        readOnly: true
+      - mountPath: /host/etc/fedora-release
+        name: etc-fedora-release
+        readOnly: true
+      - mountPath: /host/etc/lsb-release
+        name: etc-lsb-release
+        readOnly: true
+      - mountPath: /host/root
+        mountPropagation: HostToContainer
+        name: hostroot
+        readOnly: true
+      - mountPath: /lib/modules
+        mountPropagation: HostToContainer
+        name: modules
+        readOnly: true
+      - mountPath: /usr/src
+        mountPropagation: HostToContainer
+        name: src
+        readOnly: true
+      - mountPath: /var/tmp/datadog-agent/system-probe/build
+        mountPropagation: HostToContainer
+        name: runtime-compiler-output-dir
+      - mountPath: /var/tmp/datadog-agent/system-probe/kernel-headers
+        name: kernel-headers-download-dir
+      - mountPath: /host/etc/apt
+        name: apt-config-dir
+        readOnly: true
+      - mountPath: /host/etc/yum.repos.d
+        name: yum-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/zypp
+        name: opensuse-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/pki
+        name: public-key-dir
+        readOnly: true
+      - mountPath: /host/etc/yum/vars
+        name: yum-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/dnf/vars
+        name: dnf-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/rhsm
+        name: rhel-subscription-dir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostPID: true
+    initContainers:
+    - args:
+      - cp -r /etc/datadog-agent /opt
+      command:
+      - bash
+      - -c
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-volume
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/datadog-agent
+        name: config
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    - args:
+      - for script in $(find /etc/cont-init.d/ -type f -name '*.sh' | sort) ; do bash
+        $script ; done
+      command:
+      - bash
+      - -c
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-config
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    - command:
+      - cp
+      - /etc/config/system-probe-seccomp.json
+      - /host/var/lib/kubelet/seccomp/system-probe
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: seccomp-setup
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/config
+        name: datadog-agent-security
+        readOnly: true
+      - mountPath: /host/var/lib/kubelet/seccomp
+        mountPropagation: HostToContainer
+        name: seccomp-root
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-rn88c
+        readOnly: true
+    nodeName: ip-10-0-2-152.us-east-2.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsUser: 0
+    serviceAccount: datadog-agent
+    serviceAccountName: datadog-agent
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: auth-token
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-installinfo
+      name: installinfo
+    - emptyDir: {}
+      name: config
+    - emptyDir: {}
+      name: logdatadog
+    - emptyDir: {}
+      name: tmpdir
+    - hostPath:
+        path: /proc
+        type: ""
+      name: procdir
+    - hostPath:
+        path: /sys/fs/cgroup
+        type: ""
+      name: cgroups
+    - hostPath:
+        path: /etc/os-release
+        type: ""
+      name: os-release-file
+    - hostPath:
+        path: /etc/redhat-release
+        type: ""
+      name: etc-redhat-release
+    - hostPath:
+        path: /etc/fedora-release
+        type: ""
+      name: etc-fedora-release
+    - hostPath:
+        path: /etc/lsb-release
+        type: ""
+      name: etc-lsb-release
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: dsdsocket
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: apmsocket
+    - emptyDir: {}
+      name: s6-run
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-system-probe-config
+      name: sysprobe-config
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-security
+      name: datadog-agent-security
+    - hostPath:
+        path: /var/lib/kubelet/seccomp
+        type: ""
+      name: seccomp-root
+    - hostPath:
+        path: /sys/kernel/debug
+        type: ""
+      name: debugfs
+    - emptyDir: {}
+      name: sysprobe-socket-dir
+    - hostPath:
+        path: /lib/modules
+        type: ""
+      name: modules
+    - hostPath:
+        path: /usr/src
+        type: ""
+      name: src
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/build
+        type: DirectoryOrCreate
+      name: runtime-compiler-output-dir
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/kernel-headers
+        type: DirectoryOrCreate
+      name: kernel-headers-download-dir
+    - hostPath:
+        path: /etc/apt
+        type: ""
+      name: apt-config-dir
+    - hostPath:
+        path: /etc/yum.repos.d
+        type: ""
+      name: yum-repos-dir
+    - hostPath:
+        path: /etc/zypp
+        type: ""
+      name: opensuse-repos-dir
+    - hostPath:
+        path: /etc/pki
+        type: ""
+      name: public-key-dir
+    - hostPath:
+        path: /etc/yum/vars
+        type: ""
+      name: yum-vars-dir
+    - hostPath:
+        path: /etc/dnf/vars
+        type: ""
+      name: dnf-vars-dir
+    - hostPath:
+        path: /etc/rhsm
+        type: ""
+      name: rhel-subscription-dir
+    - hostPath:
+        path: /etc/passwd
+        type: ""
+      name: passwd
+    - hostPath:
+        path: /
+        type: ""
+      name: hostroot
+    - hostPath:
+        path: /var/lib/datadog-agent/logs
+        type: ""
+      name: pointerdir
+    - hostPath:
+        path: /var/log/pods
+        type: ""
+      name: logpodpath
+    - hostPath:
+        path: /var/log/containers
+        type: ""
+      name: logscontainerspath
+    - hostPath:
+        path: /var/lib/docker/containers
+        type: ""
+      name: logdockercontainerpath
+    - hostPath:
+        path: /var/run
+        type: ""
+      name: runtimesocketdir
+    - name: kube-api-access-rn88c
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:26:03Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:26:30Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:26:30Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-11-15T17:25:33Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://067f2093fd2b3bfae32fbbe8464573e2c204e5485ad3fac03d48f9f092a3e22f
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-11-15T17:26:03Z"
+    - containerID: containerd://f66026e4d2013f159e3a1bbc218eb8492f0eec0b7cf72d2a050b8c03b3647359
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: process-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-11-15T17:26:04Z"
+    - containerID: containerd://8831efc3b8538024ae39d015103e0958b3e1334f3cbf184fe993adce392e00cd
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: system-probe
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-11-15T17:26:04Z"
+    - containerID: containerd://73395bc8a41ba056f1940206126b58c3784f50cec5836e86f7ffe01aa40c4950
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: trace-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-11-15T17:26:03Z"
+    hostIP: 10.0.2.152
+    initContainerStatuses:
+    - containerID: containerd://50792fe87fae74f7e6f68fe37258c8fa262ab5e9ec4822cb3f860689ae94da96
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-volume
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://50792fe87fae74f7e6f68fe37258c8fa262ab5e9ec4822cb3f860689ae94da96
+          exitCode: 0
+          finishedAt: "2023-11-15T17:25:59Z"
+          reason: Completed
+          startedAt: "2023-11-15T17:25:59Z"
+    - containerID: containerd://b79f9703f10a947d14d93a75a08b994d9e56415af6a42f030c7f92f833767450
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-config
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://b79f9703f10a947d14d93a75a08b994d9e56415af6a42f030c7f92f833767450
+          exitCode: 0
+          finishedAt: "2023-11-15T17:26:01Z"
+          reason: Completed
+          startedAt: "2023-11-15T17:26:01Z"
+    - containerID: containerd://7d75c764ff392ea642bc2d8c75ce3f7c7d199e7167908e99dab1a76d1fa22264
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: seccomp-setup
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://7d75c764ff392ea642bc2d8c75ce3f7c7d199e7167908e99dab1a76d1fa22264
+          exitCode: 0
+          finishedAt: "2023-11-15T17:26:02Z"
+          reason: Completed
+          startedAt: "2023-11-15T17:26:02Z"
+    phase: Running
+    podIP: 10.0.2.179
+    podIPs:
+    - ip: 10.0.2.179
+    qosClass: BestEffort
+    startTime: "2023-11-15T17:25:33Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+      checksum/autoconf-config: 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b
+      checksum/checksd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/clusteragent_token: 34bf7f7454f8a08fab4c971a6f739b7fb9c2f905fe8c665d25493051f962ae37
+      checksum/confd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+      checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+      container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
+    creationTimestamp: "2023-10-31T20:42:25Z"
+    generateName: datadog-agent-
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/component: agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      controller-revision-hash: 66674df9f
+      pod-template-generation: "2"
+    name: datadog-agent-7nl5n
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: datadog-agent
+      uid: 3be3f652-68e1-4375-94c2-399cb74a7971
+    resourceVersion: "1121169"
+    uid: f34c5185-83f6-4d31-a329-c413da5c303c
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-3-22.us-east-2.compute.internal
+    automountServiceAccountToken: true
+    containers:
+    - command:
+      - agent
+      - run
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_DOGSTATSD_PORT
+        value: "8125"
+      - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_DOGSTATSD_TAG_CARDINALITY
+        value: low
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_APM_ENABLED
+        value: "false"
+      - name: DD_LOGS_ENABLED
+        value: "true"
+      - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+        value: "true"
+      - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+        value: "true"
+      - name: DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION
+        value: "false"
+      - name: DD_HEALTH_PORT
+        value: "5555"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_EXTRA_CONFIG_PROVIDERS
+        value: clusterchecks endpointschecks
+      - name: DD_IGNORE_AUTOCONF
+        value: kubernetes_state
+      - name: DD_CONTAINER_LIFECYCLE_ENABLED
+        value: "true"
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      - name: DD_EXPVAR_PORT
+        value: "6000"
+      - name: DD_COMPLIANCE_CONFIG_ENABLED
+        value: "false"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /live
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: agent
+      ports:
+      - containerPort: 8125
+        name: dogstatsdport
+        protocol: UDP
+      readinessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /ready
+          port: 5555
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/install_info
+        name: installinfo
+        readOnly: true
+        subPath: install_info
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /opt/datadog-agent/run
+        mountPropagation: HostToContainer
+        name: pointerdir
+      - mountPath: /var/log/pods
+        mountPropagation: HostToContainer
+        name: logpodpath
+        readOnly: true
+      - mountPath: /var/log/containers
+        mountPropagation: HostToContainer
+        name: logscontainerspath
+        readOnly: true
+      - mountPath: /var/lib/docker/containers
+        mountPropagation: HostToContainer
+        name: logdockercontainerpath
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    - command:
+      - trace-agent
+      - -config=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_APM_ENABLED
+        value: "true"
+      - name: DD_APM_NON_LOCAL_TRAFFIC
+        value: "true"
+      - name: DD_APM_RECEIVER_PORT
+        value: "8126"
+      - name: DD_APM_RECEIVER_SOCKET
+        value: /var/run/datadog/apm.socket
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        tcpSocket:
+          port: 8126
+        timeoutSeconds: 5
+      name: trace-agent
+      ports:
+      - containerPort: 8126
+        hostPort: 8126
+        name: traceport
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    - command:
+      - process-agent
+      - --cfgpath=/etc/datadog-agent/datadog.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_CLUSTER_AGENT_ENABLED
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_PROCESS_AGENT_DISCOVERY_ENABLED
+        value: "true"
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_SYSTEM_PROBE_ENABLED
+        value: "false"
+      - name: DD_DOGSTATSD_SOCKET
+        value: /var/run/datadog/dsd.socket
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: process-agent
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/run/datadog
+        name: dsdsocket
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /host/sys/fs/cgroup
+        mountPropagation: HostToContainer
+        name: cgroups
+        readOnly: true
+      - mountPath: /etc/passwd
+        name: passwd
+        readOnly: true
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    - command:
+      - /opt/datadog-agent/embedded/bin/system-probe
+      - --config=/etc/datadog-agent/system-probe.yaml
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: HOST_ROOT
+        value: /host/root
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: system-probe
+      resources: {}
+      securityContext:
+        capabilities:
+          add:
+          - SYS_ADMIN
+          - SYS_RESOURCE
+          - SYS_PTRACE
+          - NET_ADMIN
+          - NET_BROADCAST
+          - NET_RAW
+          - IPC_LOCK
+          - CHOWN
+          - DAC_READ_SEARCH
+        privileged: false
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/datadog-agent/auth
+        name: auth-token
+        readOnly: true
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /sys/kernel/debug
+        mountPropagation: HostToContainer
+        name: debugfs
+      - mountPath: /etc/datadog-agent
+        name: config
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/sysprobe
+        name: sysprobe-socket-dir
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/etc/os-release
+        name: os-release-file
+        readOnly: true
+      - mountPath: /host/etc/redhat-release
+        name: etc-redhat-release
+        readOnly: true
+      - mountPath: /host/etc/fedora-release
+        name: etc-fedora-release
+        readOnly: true
+      - mountPath: /host/etc/lsb-release
+        name: etc-lsb-release
+        readOnly: true
+      - mountPath: /host/root
+        mountPropagation: HostToContainer
+        name: hostroot
+        readOnly: true
+      - mountPath: /lib/modules
+        mountPropagation: HostToContainer
+        name: modules
+        readOnly: true
+      - mountPath: /usr/src
+        mountPropagation: HostToContainer
+        name: src
+        readOnly: true
+      - mountPath: /var/tmp/datadog-agent/system-probe/build
+        mountPropagation: HostToContainer
+        name: runtime-compiler-output-dir
+      - mountPath: /var/tmp/datadog-agent/system-probe/kernel-headers
+        name: kernel-headers-download-dir
+      - mountPath: /host/etc/apt
+        name: apt-config-dir
+        readOnly: true
+      - mountPath: /host/etc/yum.repos.d
+        name: yum-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/zypp
+        name: opensuse-repos-dir
+        readOnly: true
+      - mountPath: /host/etc/pki
+        name: public-key-dir
+        readOnly: true
+      - mountPath: /host/etc/yum/vars
+        name: yum-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/dnf/vars
+        name: dnf-vars-dir
+        readOnly: true
+      - mountPath: /host/etc/rhsm
+        name: rhel-subscription-dir
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostPID: true
+    initContainers:
+    - args:
+      - cp -r /etc/datadog-agent /opt
+      command:
+      - bash
+      - -c
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-volume
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/datadog-agent
+        name: config
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    - args:
+      - for script in $(find /etc/cont-init.d/ -type f -name '*.sh' | sort) ; do bash
+        $script ; done
+      command:
+      - bash
+      - -c
+      env:
+      - name: GODEBUG
+        value: x509ignoreCN=0
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "true"
+      - name: DD_AUTH_TOKEN_FILE_PATH
+        value: /etc/datadog-agent/auth/token
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_KUBERNETES_KUBELET_HOST
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.hostIP
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-config
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log/datadog
+        name: logdatadog
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /host/proc
+        mountPropagation: HostToContainer
+        name: procdir
+        readOnly: true
+      - mountPath: /host/var/run
+        mountPropagation: HostToContainer
+        name: runtimesocketdir
+        readOnly: true
+      - mountPath: /etc/datadog-agent/system-probe.yaml
+        name: sysprobe-config
+        readOnly: true
+        subPath: system-probe.yaml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    - command:
+      - cp
+      - /etc/config/system-probe-seccomp.json
+      - /host/var/lib/kubelet/seccomp/system-probe
+      image: gcr.io/datadoghq/agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: seccomp-setup
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/config
+        name: datadog-agent-security
+        readOnly: true
+      - mountPath: /host/var/lib/kubelet/seccomp
+        mountPropagation: HostToContainer
+        name: seccomp-root
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x4vjb
+        readOnly: true
+    nodeName: ip-10-0-3-22.us-east-2.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsUser: 0
+    serviceAccount: datadog-agent
+    serviceAccountName: datadog-agent
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: auth-token
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-installinfo
+      name: installinfo
+    - emptyDir: {}
+      name: config
+    - emptyDir: {}
+      name: logdatadog
+    - emptyDir: {}
+      name: tmpdir
+    - hostPath:
+        path: /proc
+        type: ""
+      name: procdir
+    - hostPath:
+        path: /sys/fs/cgroup
+        type: ""
+      name: cgroups
+    - hostPath:
+        path: /etc/os-release
+        type: ""
+      name: os-release-file
+    - hostPath:
+        path: /etc/redhat-release
+        type: ""
+      name: etc-redhat-release
+    - hostPath:
+        path: /etc/fedora-release
+        type: ""
+      name: etc-fedora-release
+    - hostPath:
+        path: /etc/lsb-release
+        type: ""
+      name: etc-lsb-release
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: dsdsocket
+    - hostPath:
+        path: /var/run/datadog/
+        type: DirectoryOrCreate
+      name: apmsocket
+    - emptyDir: {}
+      name: s6-run
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-system-probe-config
+      name: sysprobe-config
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-security
+      name: datadog-agent-security
+    - hostPath:
+        path: /var/lib/kubelet/seccomp
+        type: ""
+      name: seccomp-root
+    - hostPath:
+        path: /sys/kernel/debug
+        type: ""
+      name: debugfs
+    - emptyDir: {}
+      name: sysprobe-socket-dir
+    - hostPath:
+        path: /lib/modules
+        type: ""
+      name: modules
+    - hostPath:
+        path: /usr/src
+        type: ""
+      name: src
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/build
+        type: DirectoryOrCreate
+      name: runtime-compiler-output-dir
+    - hostPath:
+        path: /var/tmp/datadog-agent/system-probe/kernel-headers
+        type: DirectoryOrCreate
+      name: kernel-headers-download-dir
+    - hostPath:
+        path: /etc/apt
+        type: ""
+      name: apt-config-dir
+    - hostPath:
+        path: /etc/yum.repos.d
+        type: ""
+      name: yum-repos-dir
+    - hostPath:
+        path: /etc/zypp
+        type: ""
+      name: opensuse-repos-dir
+    - hostPath:
+        path: /etc/pki
+        type: ""
+      name: public-key-dir
+    - hostPath:
+        path: /etc/yum/vars
+        type: ""
+      name: yum-vars-dir
+    - hostPath:
+        path: /etc/dnf/vars
+        type: ""
+      name: dnf-vars-dir
+    - hostPath:
+        path: /etc/rhsm
+        type: ""
+      name: rhel-subscription-dir
+    - hostPath:
+        path: /etc/passwd
+        type: ""
+      name: passwd
+    - hostPath:
+        path: /
+        type: ""
+      name: hostroot
+    - hostPath:
+        path: /var/lib/datadog-agent/logs
+        type: ""
+      name: pointerdir
+    - hostPath:
+        path: /var/log/pods
+        type: ""
+      name: logpodpath
+    - hostPath:
+        path: /var/log/containers
+        type: ""
+      name: logscontainerspath
+    - hostPath:
+        path: /var/lib/docker/containers
+        type: ""
+      name: logdockercontainerpath
+    - hostPath:
+        path: /var/run
+        type: ""
+      name: runtimesocketdir
+    - name: kube-api-access-x4vjb
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:30Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:56Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:56Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:26Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://9accb6ccc37cf99023be47084730a6a3f2dd7d729b2b634f87c9bc77b0a29efa
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:42:30Z"
+    - containerID: containerd://dcb17578dede72f85e55e46aa35ef01be9bcd16a5c30ca11c744c2ba1a2cc175
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: process-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:42:30Z"
+    - containerID: containerd://248b5addeb219666e27396529fa67deea98ed4056a4d41141b445aaed1225897
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: system-probe
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:42:31Z"
+    - containerID: containerd://d8c4f81db811b95af6fd1dc2f7ec1bc4b380db7a01d7a0a7949417fd8d3a29f1
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: trace-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:42:30Z"
+    hostIP: 10.0.3.22
+    initContainerStatuses:
+    - containerID: containerd://0900a9f350342540d234324083c197ae38ebe3577bee6b1d1cc4643f31e3782a
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-volume
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://0900a9f350342540d234324083c197ae38ebe3577bee6b1d1cc4643f31e3782a
+          exitCode: 0
+          finishedAt: "2023-10-31T20:42:27Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:42:27Z"
+    - containerID: containerd://89beb4dc56f2345a2314a2c7ad4ce64733122a81110cc35a6fbd22bf503e8dc5
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: init-config
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://89beb4dc56f2345a2314a2c7ad4ce64733122a81110cc35a6fbd22bf503e8dc5
+          exitCode: 0
+          finishedAt: "2023-10-31T20:42:28Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:42:28Z"
+    - containerID: containerd://b28720b211b5a19a57561a1e4ddd37a9e9090c225cf7b2bda776c52f87bd8ee8
+      image: gcr.io/datadoghq/agent:7.48.1
+      imageID: gcr.io/datadoghq/agent@sha256:acac7ddb12452d05cccadefcb56b47a54b996f502146b1b65da471cf3497f94d
+      lastState: {}
+      name: seccomp-setup
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://b28720b211b5a19a57561a1e4ddd37a9e9090c225cf7b2bda776c52f87bd8ee8
+          exitCode: 0
+          finishedAt: "2023-10-31T20:42:29Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:42:29Z"
+    phase: Running
+    podIP: 10.0.3.119
+    podIPs:
+    - ip: 10.0.3.119
+    qosClass: BestEffort
+    startTime: "2023-10-31T20:42:26Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+      checksum/application_key: 55ab17572f1d6fbb976392c3478a57f7b89d28f9fe4629498a84249f790c076c
+      checksum/clusteragent-configmap: 288fd13147a3afff311b82fe5ae37b4232e7a901c0b0f66db3849a0ef82b5b9d
+      checksum/clusteragent_token: 982955c259b0b057c342fc3b07ee48612f6ca611ab948db4ca0ee8a053e988ed
+      checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+    creationTimestamp: "2023-10-31T20:41:48Z"
+    generateName: datadog-agent-cluster-agent-5f7df6457-
+    labels:
+      app: datadog-agent-cluster-agent
+      app.kubernetes.io/component: cluster-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      pod-template-hash: 5f7df6457
+    name: datadog-agent-cluster-agent-5f7df6457-25jxn
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: datadog-agent-cluster-agent-5f7df6457
+      uid: cb626a18-1cfb-42ef-8a04-7617b94173b2
+    resourceVersion: "1120959"
+    uid: 5bc079c7-4b5e-4ff8-ba13-2bbc0831f5f4
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app: datadog-agent-cluster-agent
+            topologyKey: kubernetes.io/hostname
+          weight: 50
+    automountServiceAccountToken: true
+    containers:
+    - env:
+      - name: DD_POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      - name: DD_HEALTH_PORT
+        value: "5556"
+      - name: DD_API_KEY
+        valueFrom:
+          secretKeyRef:
+            key: api-key
+            name: datadog-agent
+            optional: true
+      - name: KUBERNETES
+        value: "yes"
+      - name: DD_SITE
+        value: datadoghq.com
+      - name: DD_APP_KEY
+        valueFrom:
+          secretKeyRef:
+            key: app-key
+            name: datadog-agent-appkey
+      - name: DD_EXTERNAL_METRICS_PROVIDER_ENABLED
+        value: "true"
+      - name: DD_EXTERNAL_METRICS_PROVIDER_PORT
+        value: "8443"
+      - name: DD_EXTERNAL_METRICS_PROVIDER_WPA_CONTROLLER
+        value: "false"
+      - name: DD_EXTERNAL_METRICS_PROVIDER_USE_DATADOGMETRIC_CRD
+        value: "false"
+      - name: DD_EXTERNAL_METRICS_AGGREGATOR
+        value: avg
+      - name: DD_ADMISSION_CONTROLLER_ENABLED
+        value: "true"
+      - name: DD_ADMISSION_CONTROLLER_WEBHOOK_NAME
+        value: datadog-webhook
+      - name: DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED
+        value: "false"
+      - name: DD_ADMISSION_CONTROLLER_SERVICE_NAME
+        value: datadog-agent-cluster-agent-admission-controller
+      - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE
+        value: socket
+      - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME
+        value: datadog-agent
+      - name: DD_ADMISSION_CONTROLLER_FAILURE_POLICY
+        value: Ignore
+      - name: DD_ADMISSION_CONTROLLER_PORT
+        value: "8000"
+      - name: DD_REMOTE_CONFIGURATION_ENABLED
+        value: "false"
+      - name: DD_CLUSTER_CHECKS_ENABLED
+        value: "true"
+      - name: DD_EXTRA_CONFIG_PROVIDERS
+        value: kube_endpoints kube_services
+      - name: DD_EXTRA_LISTENERS
+        value: kube_endpoints kube_services
+      - name: DD_LOG_LEVEL
+        value: INFO
+      - name: DD_LEADER_ELECTION
+        value: "true"
+      - name: DD_LEADER_ELECTION_DEFAULT_RESOURCE
+        value: configmap
+      - name: DD_LEADER_LEASE_NAME
+        value: datadog-agent-leader-election
+      - name: DD_CLUSTER_AGENT_TOKEN_NAME
+        value: datadog-agenttoken
+      - name: DD_COLLECT_KUBERNETES_EVENTS
+        value: "true"
+      - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+        value: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: datadog-agent-cluster-agent
+      - name: DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS
+        value: "false"
+      - name: DD_KUBE_RESOURCES_NAMESPACE
+        value: beacon
+      - name: CHART_RELEASE_NAME
+        value: datadog-agent
+      - name: AGENT_DAEMONSET
+        value: datadog-agent
+      - name: CLUSTER_AGENT_DEPLOYMENT
+        value: datadog-agent-cluster-agent
+      - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+        value: "true"
+      - name: DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED
+        value: "true"
+      image: gcr.io/datadoghq/cluster-agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /live
+          port: 5556
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: cluster-agent
+      ports:
+      - containerPort: 5005
+        name: agentport
+        protocol: TCP
+      - containerPort: 5000
+        name: agentmetrics
+        protocol: TCP
+      - containerPort: 8443
+        name: metricsapi
+        protocol: TCP
+      - containerPort: 8000
+        name: datadog-webhook
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 6
+        httpGet:
+          path: /ready
+          port: 5556
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/datadog-agent/run
+        name: datadogrun
+      - mountPath: /var/log/datadog
+        name: varlog
+      - mountPath: /tmp
+        name: tmpdir
+      - mountPath: /etc/datadog-agent/install_info
+        name: installinfo
+        readOnly: true
+        subPath: install_info
+      - mountPath: /conf.d
+        name: confd
+        readOnly: true
+      - mountPath: /etc/datadog-agent
+        name: config
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-cbj2b
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    initContainers:
+    - args:
+      - |
+        chmod -R 744 /etc/datadog-agent;
+        cp -r /etc/datadog-agent /opt
+      command:
+      - bash
+      - -c
+      image: gcr.io/datadoghq/cluster-agent:7.48.1
+      imagePullPolicy: IfNotPresent
+      name: init-volume
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/datadog-agent
+        name: config
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-cbj2b
+        readOnly: true
+    nodeName: ip-10-0-3-22.us-east-2.compute.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: datadog-agent-cluster-agent
+    serviceAccountName: datadog-agent-cluster-agent
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - emptyDir: {}
+      name: datadogrun
+    - emptyDir: {}
+      name: varlog
+    - emptyDir: {}
+      name: tmpdir
+    - configMap:
+        defaultMode: 420
+        name: datadog-agent-installinfo
+      name: installinfo
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: kubernetes_state_core.yaml.default
+          path: kubernetes_state_core.yaml.default
+        name: datadog-agent-cluster-agent-confd
+      name: confd
+    - emptyDir: {}
+      name: config
+    - name: kube-api-access-cbj2b
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:41:58Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:19Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:42:19Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-10-31T20:41:48Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://5932e7d8edc8e486924e0feb111047964467edbe01bbc04aed134f4ded6bf814
+      image: gcr.io/datadoghq/cluster-agent:7.48.1
+      imageID: gcr.io/datadoghq/cluster-agent@sha256:a73971bafcead6cd71b3f01d2ce422c9708346472c0d14c73fd916d4da745fec
+      lastState: {}
+      name: cluster-agent
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2023-10-31T20:41:58Z"
+    hostIP: 10.0.3.22
+    initContainerStatuses:
+    - containerID: containerd://3852939f0cc94a4dc1c910865dd7158e3d1e01ec62d8ed07ecc956b915cd04da
+      image: gcr.io/datadoghq/cluster-agent:7.48.1
+      imageID: gcr.io/datadoghq/cluster-agent@sha256:a73971bafcead6cd71b3f01d2ce422c9708346472c0d14c73fd916d4da745fec
+      lastState: {}
+      name: init-volume
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://3852939f0cc94a4dc1c910865dd7158e3d1e01ec62d8ed07ecc956b915cd04da
+          exitCode: 0
+          finishedAt: "2023-10-31T20:41:56Z"
+          reason: Completed
+          startedAt: "2023-10-31T20:41:56Z"
+    phase: Running
+    podIP: 10.0.3.96
+    podIPs:
+    - ip: 10.0.3.96
+    qosClass: BestEffort
+    startTime: "2023-10-31T20:41:48Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-10-31T09:49:48Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    name: beacon
+    namespace: beacon
+    resourceVersion: "985404"
+    uid: 9ab660d1-40fd-4056-8286-ecfdedc47571
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 172.20.127.56
+    clusterIPs:
+    - 172.20.127.56
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 31747
+      port: 8080
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: beacon
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - hostname: a9ab660d140fd40568286ecfdedc4757-2006064307.us-east-2.elb.amazonaws.com
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      chart: datadog-3.42.1
+      helm.sh/chart: datadog-3.42.1
+      heritage: Helm
+      release: datadog-agent
+    name: datadog-agent
+    namespace: beacon
+    resourceVersion: "1120766"
+    uid: b0043305-d21f-4271-9139-dcb7b37951cc
+  spec:
+    clusterIP: 172.20.58.191
+    clusterIPs:
+    - 172.20.58.191
+    internalTrafficPolicy: Local
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: dogstatsdport
+      port: 8125
+      protocol: UDP
+      targetPort: 8125
+    - name: traceport
+      port: 8126
+      protocol: TCP
+      targetPort: 8126
+    selector:
+      app: datadog-agent
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    labels:
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      helm.sh/chart: datadog-3.42.1
+    name: datadog-agent-cluster-agent
+    namespace: beacon
+    resourceVersion: "990176"
+    uid: 8ebcb598-2a7d-4fb3-bd4a-c2d5cea10b9f
+  spec:
+    clusterIP: 172.20.243.42
+    clusterIPs:
+    - 172.20.243.42
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: agentport
+      port: 5005
+      protocol: TCP
+      targetPort: 5005
+    selector:
+      app: datadog-agent-cluster-agent
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      chart: datadog-3.42.1
+      helm.sh/chart: datadog-3.42.1
+      heritage: Helm
+      release: datadog-agent
+    name: datadog-agent-cluster-agent-admission-controller
+    namespace: beacon
+    resourceVersion: "990172"
+    uid: 5742346c-b461-4e8b-9778-6935fdb76f77
+  spec:
+    clusterIP: 172.20.226.118
+    clusterIPs:
+    - 172.20.226.118
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: datadog-webhook
+      port: 443
+      protocol: TCP
+      targetPort: 8000
+    selector:
+      app: datadog-agent-cluster-agent
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    labels:
+      app: datadog-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      chart: datadog-3.42.1
+      helm.sh/chart: datadog-3.42.1
+      heritage: Helm
+      release: datadog-agent
+    name: datadog-agent-cluster-agent-metrics-api
+    namespace: beacon
+    resourceVersion: "990179"
+    uid: 7fb69610-42f0-47b1-b20b-f9a060a08c4b
+  spec:
+    clusterIP: 172.20.148.118
+    clusterIPs:
+    - 172.20.148.118
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metricsapi
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      app: datadog-agent-cluster-agent
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: DaemonSet
+  metadata:
+    annotations:
+      deprecated.daemonset.template.generation: "2"
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      helm.sh/chart: datadog-3.42.1
+    name: datadog-agent
+    namespace: beacon
+    resourceVersion: "5564475"
+    uid: 3be3f652-68e1-4375-94c2-399cb74a7971
+  spec:
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: datadog-agent
+    template:
+      metadata:
+        annotations:
+          checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+          checksum/autoconf-config: 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b
+          checksum/checksd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+          checksum/clusteragent_token: 34bf7f7454f8a08fab4c971a6f739b7fb9c2f905fe8c665d25493051f962ae37
+          checksum/confd-config: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+          checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+          container.apparmor.security.beta.kubernetes.io/system-probe: unconfined
+        creationTimestamp: null
+        labels:
+          app: datadog-agent
+          app.kubernetes.io/component: agent
+          app.kubernetes.io/instance: datadog-agent
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: datadog-agent
+        name: datadog-agent
+      spec:
+        affinity: {}
+        automountServiceAccountToken: true
+        containers:
+        - command:
+          - agent
+          - run
+          env:
+          - name: GODEBUG
+            value: x509ignoreCN=0
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "true"
+          - name: DD_AUTH_TOKEN_FILE_PATH
+            value: /etc/datadog-agent/auth/token
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_KUBERNETES_KUBELET_HOST
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_DOGSTATSD_PORT
+            value: "8125"
+          - name: DD_DOGSTATSD_NON_LOCAL_TRAFFIC
+            value: "true"
+          - name: DD_DOGSTATSD_TAG_CARDINALITY
+            value: low
+          - name: DD_CLUSTER_AGENT_ENABLED
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_APM_ENABLED
+            value: "false"
+          - name: DD_LOGS_ENABLED
+            value: "true"
+          - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+            value: "true"
+          - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+            value: "true"
+          - name: DD_LOGS_CONFIG_AUTO_MULTI_LINE_DETECTION
+            value: "false"
+          - name: DD_HEALTH_PORT
+            value: "5555"
+          - name: DD_DOGSTATSD_SOCKET
+            value: /var/run/datadog/dsd.socket
+          - name: DD_EXTRA_CONFIG_PROVIDERS
+            value: clusterchecks endpointschecks
+          - name: DD_IGNORE_AUTOCONF
+            value: kubernetes_state
+          - name: DD_CONTAINER_LIFECYCLE_ENABLED
+            value: "true"
+          - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+            value: "true"
+          - name: DD_EXPVAR_PORT
+            value: "6000"
+          - name: DD_COMPLIANCE_CONFIG_ENABLED
+            value: "false"
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /live
+              port: 5555
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: agent
+          ports:
+          - containerPort: 8125
+            name: dogstatsdport
+            protocol: UDP
+          readinessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /ready
+              port: 5555
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/log/datadog
+            name: logdatadog
+          - mountPath: /etc/datadog-agent/install_info
+            name: installinfo
+            readOnly: true
+            subPath: install_info
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /host/etc/os-release
+            name: os-release-file
+            readOnly: true
+          - mountPath: /etc/datadog-agent
+            name: config
+          - mountPath: /etc/datadog-agent/auth
+            name: auth-token
+          - mountPath: /host/var/run
+            mountPropagation: HostToContainer
+            name: runtimesocketdir
+            readOnly: true
+          - mountPath: /var/run/datadog
+            name: dsdsocket
+          - mountPath: /var/run/sysprobe
+            name: sysprobe-socket-dir
+            readOnly: true
+          - mountPath: /etc/datadog-agent/system-probe.yaml
+            name: sysprobe-config
+            readOnly: true
+            subPath: system-probe.yaml
+          - mountPath: /host/proc
+            mountPropagation: HostToContainer
+            name: procdir
+            readOnly: true
+          - mountPath: /host/sys/fs/cgroup
+            mountPropagation: HostToContainer
+            name: cgroups
+            readOnly: true
+          - mountPath: /opt/datadog-agent/run
+            mountPropagation: HostToContainer
+            name: pointerdir
+          - mountPath: /var/log/pods
+            mountPropagation: HostToContainer
+            name: logpodpath
+            readOnly: true
+          - mountPath: /var/log/containers
+            mountPropagation: HostToContainer
+            name: logscontainerspath
+            readOnly: true
+          - mountPath: /var/lib/docker/containers
+            mountPropagation: HostToContainer
+            name: logdockercontainerpath
+            readOnly: true
+        - command:
+          - trace-agent
+          - -config=/etc/datadog-agent/datadog.yaml
+          env:
+          - name: GODEBUG
+            value: x509ignoreCN=0
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "true"
+          - name: DD_AUTH_TOKEN_FILE_PATH
+            value: /etc/datadog-agent/auth/token
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_KUBERNETES_KUBELET_HOST
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: DD_CLUSTER_AGENT_ENABLED
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_APM_ENABLED
+            value: "true"
+          - name: DD_APM_NON_LOCAL_TRAFFIC
+            value: "true"
+          - name: DD_APM_RECEIVER_PORT
+            value: "8126"
+          - name: DD_APM_RECEIVER_SOCKET
+            value: /var/run/datadog/apm.socket
+          - name: DD_DOGSTATSD_SOCKET
+            value: /var/run/datadog/dsd.socket
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            tcpSocket:
+              port: 8126
+            timeoutSeconds: 5
+          name: trace-agent
+          ports:
+          - containerPort: 8126
+            hostPort: 8126
+            name: traceport
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/datadog-agent
+            name: config
+            readOnly: true
+          - mountPath: /var/log/datadog
+            name: logdatadog
+          - mountPath: /etc/datadog-agent/auth
+            name: auth-token
+            readOnly: true
+          - mountPath: /host/proc
+            mountPropagation: HostToContainer
+            name: procdir
+            readOnly: true
+          - mountPath: /host/sys/fs/cgroup
+            mountPropagation: HostToContainer
+            name: cgroups
+            readOnly: true
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /var/run/datadog
+            name: dsdsocket
+          - mountPath: /host/var/run
+            mountPropagation: HostToContainer
+            name: runtimesocketdir
+            readOnly: true
+        - command:
+          - process-agent
+          - --cfgpath=/etc/datadog-agent/datadog.yaml
+          env:
+          - name: GODEBUG
+            value: x509ignoreCN=0
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "true"
+          - name: DD_AUTH_TOKEN_FILE_PATH
+            value: /etc/datadog-agent/auth/token
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_KUBERNETES_KUBELET_HOST
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: DD_CLUSTER_AGENT_ENABLED
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_PROCESS_AGENT_DISCOVERY_ENABLED
+            value: "true"
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_SYSTEM_PROBE_ENABLED
+            value: "false"
+          - name: DD_DOGSTATSD_SOCKET
+            value: /var/run/datadog/dsd.socket
+          - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+            value: "true"
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: process-agent
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/datadog-agent
+            name: config
+            readOnly: true
+          - mountPath: /var/log/datadog
+            name: logdatadog
+          - mountPath: /etc/datadog-agent/auth
+            name: auth-token
+            readOnly: true
+          - mountPath: /var/run/datadog
+            name: dsdsocket
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /host/etc/os-release
+            name: os-release-file
+            readOnly: true
+          - mountPath: /host/var/run
+            mountPropagation: HostToContainer
+            name: runtimesocketdir
+            readOnly: true
+          - mountPath: /host/sys/fs/cgroup
+            mountPropagation: HostToContainer
+            name: cgroups
+            readOnly: true
+          - mountPath: /etc/passwd
+            name: passwd
+            readOnly: true
+          - mountPath: /host/proc
+            mountPropagation: HostToContainer
+            name: procdir
+            readOnly: true
+          - mountPath: /var/run/sysprobe
+            name: sysprobe-socket-dir
+            readOnly: true
+          - mountPath: /etc/datadog-agent/system-probe.yaml
+            name: sysprobe-config
+            readOnly: true
+            subPath: system-probe.yaml
+        - command:
+          - /opt/datadog-agent/embedded/bin/system-probe
+          - --config=/etc/datadog-agent/system-probe.yaml
+          env:
+          - name: GODEBUG
+            value: x509ignoreCN=0
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "true"
+          - name: DD_AUTH_TOKEN_FILE_PATH
+            value: /etc/datadog-agent/auth/token
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_KUBERNETES_KUBELET_HOST
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: HOST_ROOT
+            value: /host/root
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: system-probe
+          resources: {}
+          securityContext:
+            capabilities:
+              add:
+              - SYS_ADMIN
+              - SYS_RESOURCE
+              - SYS_PTRACE
+              - NET_ADMIN
+              - NET_BROADCAST
+              - NET_RAW
+              - IPC_LOCK
+              - CHOWN
+              - DAC_READ_SEARCH
+            privileged: false
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/datadog-agent/auth
+            name: auth-token
+            readOnly: true
+          - mountPath: /var/log/datadog
+            name: logdatadog
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /sys/kernel/debug
+            mountPropagation: HostToContainer
+            name: debugfs
+          - mountPath: /etc/datadog-agent
+            name: config
+            readOnly: true
+          - mountPath: /etc/datadog-agent/system-probe.yaml
+            name: sysprobe-config
+            readOnly: true
+            subPath: system-probe.yaml
+          - mountPath: /var/run/sysprobe
+            name: sysprobe-socket-dir
+          - mountPath: /host/proc
+            mountPropagation: HostToContainer
+            name: procdir
+            readOnly: true
+          - mountPath: /host/etc/os-release
+            name: os-release-file
+            readOnly: true
+          - mountPath: /host/etc/redhat-release
+            name: etc-redhat-release
+            readOnly: true
+          - mountPath: /host/etc/fedora-release
+            name: etc-fedora-release
+            readOnly: true
+          - mountPath: /host/etc/lsb-release
+            name: etc-lsb-release
+            readOnly: true
+          - mountPath: /host/root
+            mountPropagation: HostToContainer
+            name: hostroot
+            readOnly: true
+          - mountPath: /lib/modules
+            mountPropagation: HostToContainer
+            name: modules
+            readOnly: true
+          - mountPath: /usr/src
+            mountPropagation: HostToContainer
+            name: src
+            readOnly: true
+          - mountPath: /var/tmp/datadog-agent/system-probe/build
+            mountPropagation: HostToContainer
+            name: runtime-compiler-output-dir
+          - mountPath: /var/tmp/datadog-agent/system-probe/kernel-headers
+            name: kernel-headers-download-dir
+          - mountPath: /host/etc/apt
+            name: apt-config-dir
+            readOnly: true
+          - mountPath: /host/etc/yum.repos.d
+            name: yum-repos-dir
+            readOnly: true
+          - mountPath: /host/etc/zypp
+            name: opensuse-repos-dir
+            readOnly: true
+          - mountPath: /host/etc/pki
+            name: public-key-dir
+            readOnly: true
+          - mountPath: /host/etc/yum/vars
+            name: yum-vars-dir
+            readOnly: true
+          - mountPath: /host/etc/dnf/vars
+            name: dnf-vars-dir
+            readOnly: true
+          - mountPath: /host/etc/rhsm
+            name: rhel-subscription-dir
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        hostPID: true
+        initContainers:
+        - args:
+          - cp -r /etc/datadog-agent /opt
+          command:
+          - bash
+          - -c
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: init-volume
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent
+            name: config
+        - args:
+          - for script in $(find /etc/cont-init.d/ -type f -name '*.sh' | sort) ;
+            do bash $script ; done
+          command:
+          - bash
+          - -c
+          env:
+          - name: GODEBUG
+            value: x509ignoreCN=0
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "true"
+          - name: DD_AUTH_TOKEN_FILE_PATH
+            value: /etc/datadog-agent/auth/token
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_KUBERNETES_KUBELET_HOST
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: init-config
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/log/datadog
+            name: logdatadog
+          - mountPath: /etc/datadog-agent
+            name: config
+          - mountPath: /host/proc
+            mountPropagation: HostToContainer
+            name: procdir
+            readOnly: true
+          - mountPath: /host/var/run
+            mountPropagation: HostToContainer
+            name: runtimesocketdir
+            readOnly: true
+          - mountPath: /etc/datadog-agent/system-probe.yaml
+            name: sysprobe-config
+            readOnly: true
+            subPath: system-probe.yaml
+        - command:
+          - cp
+          - /etc/config/system-probe-seccomp.json
+          - /host/var/lib/kubelet/seccomp/system-probe
+          image: gcr.io/datadoghq/agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: seccomp-setup
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/config
+            name: datadog-agent-security
+            readOnly: true
+          - mountPath: /host/var/lib/kubelet/seccomp
+            mountPropagation: HostToContainer
+            name: seccomp-root
+        nodeSelector:
+          kubernetes.io/os: linux
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsUser: 0
+        serviceAccount: datadog-agent
+        serviceAccountName: datadog-agent
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: auth-token
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-installinfo
+          name: installinfo
+        - emptyDir: {}
+          name: config
+        - emptyDir: {}
+          name: logdatadog
+        - emptyDir: {}
+          name: tmpdir
+        - hostPath:
+            path: /proc
+            type: ""
+          name: procdir
+        - hostPath:
+            path: /sys/fs/cgroup
+            type: ""
+          name: cgroups
+        - hostPath:
+            path: /etc/os-release
+            type: ""
+          name: os-release-file
+        - hostPath:
+            path: /etc/redhat-release
+            type: ""
+          name: etc-redhat-release
+        - hostPath:
+            path: /etc/fedora-release
+            type: ""
+          name: etc-fedora-release
+        - hostPath:
+            path: /etc/lsb-release
+            type: ""
+          name: etc-lsb-release
+        - hostPath:
+            path: /var/run/datadog/
+            type: DirectoryOrCreate
+          name: dsdsocket
+        - hostPath:
+            path: /var/run/datadog/
+            type: DirectoryOrCreate
+          name: apmsocket
+        - emptyDir: {}
+          name: s6-run
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-system-probe-config
+          name: sysprobe-config
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-security
+          name: datadog-agent-security
+        - hostPath:
+            path: /var/lib/kubelet/seccomp
+            type: ""
+          name: seccomp-root
+        - hostPath:
+            path: /sys/kernel/debug
+            type: ""
+          name: debugfs
+        - emptyDir: {}
+          name: sysprobe-socket-dir
+        - hostPath:
+            path: /lib/modules
+            type: ""
+          name: modules
+        - hostPath:
+            path: /usr/src
+            type: ""
+          name: src
+        - hostPath:
+            path: /var/tmp/datadog-agent/system-probe/build
+            type: DirectoryOrCreate
+          name: runtime-compiler-output-dir
+        - hostPath:
+            path: /var/tmp/datadog-agent/system-probe/kernel-headers
+            type: DirectoryOrCreate
+          name: kernel-headers-download-dir
+        - hostPath:
+            path: /etc/apt
+            type: ""
+          name: apt-config-dir
+        - hostPath:
+            path: /etc/yum.repos.d
+            type: ""
+          name: yum-repos-dir
+        - hostPath:
+            path: /etc/zypp
+            type: ""
+          name: opensuse-repos-dir
+        - hostPath:
+            path: /etc/pki
+            type: ""
+          name: public-key-dir
+        - hostPath:
+            path: /etc/yum/vars
+            type: ""
+          name: yum-vars-dir
+        - hostPath:
+            path: /etc/dnf/vars
+            type: ""
+          name: dnf-vars-dir
+        - hostPath:
+            path: /etc/rhsm
+            type: ""
+          name: rhel-subscription-dir
+        - hostPath:
+            path: /etc/passwd
+            type: ""
+          name: passwd
+        - hostPath:
+            path: /
+            type: ""
+          name: hostroot
+        - hostPath:
+            path: /var/lib/datadog-agent/logs
+            type: ""
+          name: pointerdir
+        - hostPath:
+            path: /var/log/pods
+            type: ""
+          name: logpodpath
+        - hostPath:
+            path: /var/log/containers
+            type: ""
+          name: logscontainerspath
+        - hostPath:
+            path: /var/lib/docker/containers
+            type: ""
+          name: logdockercontainerpath
+        - hostPath:
+            path: /var/run
+            type: ""
+          name: runtimesocketdir
+    updateStrategy:
+      rollingUpdate:
+        maxSurge: 0
+        maxUnavailable: 10%
+      type: RollingUpdate
+  status:
+    currentNumberScheduled: 3
+    desiredNumberScheduled: 3
+    numberAvailable: 3
+    numberMisscheduled: 0
+    numberReady: 3
+    observedGeneration: 2
+    updatedNumberScheduled: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2023-10-31T09:49:39Z"
+    generation: 1
+    labels:
+      app: beacon
+    name: beacon
+    namespace: beacon
+    resourceVersion: "5561057"
+    uid: 9525a248-8cc9-4a66-a723-afd2504592a2
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: beacon
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: beacon
+      spec:
+        automountServiceAccountToken: true
+        containers:
+        - image: onlydole/beacon:datadog
+          imagePullPolicy: IfNotPresent
+          name: beacon
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: true
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        shareProcessNamespace: false
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2023-10-31T09:49:39Z"
+      lastUpdateTime: "2023-10-31T09:49:44Z"
+      message: ReplicaSet "beacon-cf7447586" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2023-11-15T17:24:57Z"
+      lastUpdateTime: "2023-11-15T17:24:57Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "2"
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: cluster-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      app.kubernetes.io/version: "7"
+      helm.sh/chart: datadog-3.42.1
+    name: datadog-agent-cluster-agent
+    namespace: beacon
+    resourceVersion: "1120981"
+    uid: a7333858-25b7-4cf3-89e3-ad89b189cf92
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: datadog-agent-cluster-agent
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 0
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+          checksum/application_key: 55ab17572f1d6fbb976392c3478a57f7b89d28f9fe4629498a84249f790c076c
+          checksum/clusteragent-configmap: 288fd13147a3afff311b82fe5ae37b4232e7a901c0b0f66db3849a0ef82b5b9d
+          checksum/clusteragent_token: 982955c259b0b057c342fc3b07ee48612f6ca611ab948db4ca0ee8a053e988ed
+          checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+        creationTimestamp: null
+        labels:
+          app: datadog-agent-cluster-agent
+          app.kubernetes.io/component: cluster-agent
+          app.kubernetes.io/instance: datadog-agent
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: datadog-agent
+        name: datadog-agent-cluster-agent
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: datadog-agent-cluster-agent
+                topologyKey: kubernetes.io/hostname
+              weight: 50
+        automountServiceAccountToken: true
+        containers:
+        - env:
+          - name: DD_POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: DD_HEALTH_PORT
+            value: "5556"
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+                optional: true
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_APP_KEY
+            valueFrom:
+              secretKeyRef:
+                key: app-key
+                name: datadog-agent-appkey
+          - name: DD_EXTERNAL_METRICS_PROVIDER_ENABLED
+            value: "true"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_PORT
+            value: "8443"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_WPA_CONTROLLER
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_USE_DATADOGMETRIC_CRD
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_AGGREGATOR
+            value: avg
+          - name: DD_ADMISSION_CONTROLLER_ENABLED
+            value: "true"
+          - name: DD_ADMISSION_CONTROLLER_WEBHOOK_NAME
+            value: datadog-webhook
+          - name: DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED
+            value: "false"
+          - name: DD_ADMISSION_CONTROLLER_SERVICE_NAME
+            value: datadog-agent-cluster-agent-admission-controller
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE
+            value: socket
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME
+            value: datadog-agent
+          - name: DD_ADMISSION_CONTROLLER_FAILURE_POLICY
+            value: Ignore
+          - name: DD_ADMISSION_CONTROLLER_PORT
+            value: "8000"
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "false"
+          - name: DD_CLUSTER_CHECKS_ENABLED
+            value: "true"
+          - name: DD_EXTRA_CONFIG_PROVIDERS
+            value: kube_endpoints kube_services
+          - name: DD_EXTRA_LISTENERS
+            value: kube_endpoints kube_services
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_LEADER_ELECTION
+            value: "true"
+          - name: DD_LEADER_ELECTION_DEFAULT_RESOURCE
+            value: configmap
+          - name: DD_LEADER_LEASE_NAME
+            value: datadog-agent-leader-election
+          - name: DD_CLUSTER_AGENT_TOKEN_NAME
+            value: datadog-agenttoken
+          - name: DD_COLLECT_KUBERNETES_EVENTS
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS
+            value: "false"
+          - name: DD_KUBE_RESOURCES_NAMESPACE
+            value: beacon
+          - name: CHART_RELEASE_NAME
+            value: datadog-agent
+          - name: AGENT_DAEMONSET
+            value: datadog-agent
+          - name: CLUSTER_AGENT_DEPLOYMENT
+            value: datadog-agent-cluster-agent
+          - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+            value: "true"
+          - name: DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED
+            value: "true"
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /live
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: cluster-agent
+          ports:
+          - containerPort: 5005
+            name: agentport
+            protocol: TCP
+          - containerPort: 5000
+            name: agentmetrics
+            protocol: TCP
+          - containerPort: 8443
+            name: metricsapi
+            protocol: TCP
+          - containerPort: 8000
+            name: datadog-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /ready
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent/run
+            name: datadogrun
+          - mountPath: /var/log/datadog
+            name: varlog
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /etc/datadog-agent/install_info
+            name: installinfo
+            readOnly: true
+            subPath: install_info
+          - mountPath: /conf.d
+            name: confd
+            readOnly: true
+          - mountPath: /etc/datadog-agent
+            name: config
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - args:
+          - |
+            chmod -R 744 /etc/datadog-agent;
+            cp -r /etc/datadog-agent /opt
+          command:
+          - bash
+          - -c
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: init-volume
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent
+            name: config
+        nodeSelector:
+          kubernetes.io/os: linux
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: datadog-agent-cluster-agent
+        serviceAccountName: datadog-agent-cluster-agent
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: datadogrun
+        - emptyDir: {}
+          name: varlog
+        - emptyDir: {}
+          name: tmpdir
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-installinfo
+          name: installinfo
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: kubernetes_state_core.yaml.default
+              path: kubernetes_state_core.yaml.default
+            name: datadog-agent-cluster-agent-confd
+          name: confd
+        - emptyDir: {}
+          name: config
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2023-10-31T10:13:39Z"
+      lastUpdateTime: "2023-10-31T10:13:39Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2023-10-31T10:13:08Z"
+      lastUpdateTime: "2023-10-31T20:42:19Z"
+      message: ReplicaSet "datadog-agent-cluster-agent-5f7df6457" has successfully
+        progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2023-10-31T09:49:39Z"
+    generation: 1
+    labels:
+      app: beacon
+      pod-template-hash: cf7447586
+    name: beacon-cf7447586
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: beacon
+      uid: 9525a248-8cc9-4a66-a723-afd2504592a2
+    resourceVersion: "5561054"
+    uid: e85f44fb-ee9f-406e-b2a4-9ca149312bae
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: beacon
+        pod-template-hash: cf7447586
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: beacon
+          pod-template-hash: cf7447586
+      spec:
+        automountServiceAccountToken: true
+        containers:
+        - image: onlydole/beacon:datadog
+          imagePullPolicy: IfNotPresent
+          name: beacon
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: true
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        shareProcessNamespace: false
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "2"
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T20:41:48Z"
+    generation: 1
+    labels:
+      app: datadog-agent-cluster-agent
+      app.kubernetes.io/component: cluster-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      pod-template-hash: 5f7df6457
+    name: datadog-agent-cluster-agent-5f7df6457
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: datadog-agent-cluster-agent
+      uid: a7333858-25b7-4cf3-89e3-ad89b189cf92
+    resourceVersion: "1120964"
+    uid: cb626a18-1cfb-42ef-8a04-7617b94173b2
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: datadog-agent-cluster-agent
+        pod-template-hash: 5f7df6457
+    template:
+      metadata:
+        annotations:
+          checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+          checksum/application_key: 55ab17572f1d6fbb976392c3478a57f7b89d28f9fe4629498a84249f790c076c
+          checksum/clusteragent-configmap: 288fd13147a3afff311b82fe5ae37b4232e7a901c0b0f66db3849a0ef82b5b9d
+          checksum/clusteragent_token: 982955c259b0b057c342fc3b07ee48612f6ca611ab948db4ca0ee8a053e988ed
+          checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+        creationTimestamp: null
+        labels:
+          app: datadog-agent-cluster-agent
+          app.kubernetes.io/component: cluster-agent
+          app.kubernetes.io/instance: datadog-agent
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: datadog-agent
+          pod-template-hash: 5f7df6457
+        name: datadog-agent-cluster-agent
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: datadog-agent-cluster-agent
+                topologyKey: kubernetes.io/hostname
+              weight: 50
+        automountServiceAccountToken: true
+        containers:
+        - env:
+          - name: DD_POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: DD_HEALTH_PORT
+            value: "5556"
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+                optional: true
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_APP_KEY
+            valueFrom:
+              secretKeyRef:
+                key: app-key
+                name: datadog-agent-appkey
+          - name: DD_EXTERNAL_METRICS_PROVIDER_ENABLED
+            value: "true"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_PORT
+            value: "8443"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_WPA_CONTROLLER
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_USE_DATADOGMETRIC_CRD
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_AGGREGATOR
+            value: avg
+          - name: DD_ADMISSION_CONTROLLER_ENABLED
+            value: "true"
+          - name: DD_ADMISSION_CONTROLLER_WEBHOOK_NAME
+            value: datadog-webhook
+          - name: DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED
+            value: "false"
+          - name: DD_ADMISSION_CONTROLLER_SERVICE_NAME
+            value: datadog-agent-cluster-agent-admission-controller
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE
+            value: socket
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME
+            value: datadog-agent
+          - name: DD_ADMISSION_CONTROLLER_FAILURE_POLICY
+            value: Ignore
+          - name: DD_ADMISSION_CONTROLLER_PORT
+            value: "8000"
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "false"
+          - name: DD_CLUSTER_CHECKS_ENABLED
+            value: "true"
+          - name: DD_EXTRA_CONFIG_PROVIDERS
+            value: kube_endpoints kube_services
+          - name: DD_EXTRA_LISTENERS
+            value: kube_endpoints kube_services
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_LEADER_ELECTION
+            value: "true"
+          - name: DD_LEADER_ELECTION_DEFAULT_RESOURCE
+            value: configmap
+          - name: DD_LEADER_LEASE_NAME
+            value: datadog-agent-leader-election
+          - name: DD_CLUSTER_AGENT_TOKEN_NAME
+            value: datadog-agenttoken
+          - name: DD_COLLECT_KUBERNETES_EVENTS
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS
+            value: "false"
+          - name: DD_KUBE_RESOURCES_NAMESPACE
+            value: beacon
+          - name: CHART_RELEASE_NAME
+            value: datadog-agent
+          - name: AGENT_DAEMONSET
+            value: datadog-agent
+          - name: CLUSTER_AGENT_DEPLOYMENT
+            value: datadog-agent-cluster-agent
+          - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+            value: "true"
+          - name: DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED
+            value: "true"
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /live
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: cluster-agent
+          ports:
+          - containerPort: 5005
+            name: agentport
+            protocol: TCP
+          - containerPort: 5000
+            name: agentmetrics
+            protocol: TCP
+          - containerPort: 8443
+            name: metricsapi
+            protocol: TCP
+          - containerPort: 8000
+            name: datadog-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /ready
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent/run
+            name: datadogrun
+          - mountPath: /var/log/datadog
+            name: varlog
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /etc/datadog-agent/install_info
+            name: installinfo
+            readOnly: true
+            subPath: install_info
+          - mountPath: /conf.d
+            name: confd
+            readOnly: true
+          - mountPath: /etc/datadog-agent
+            name: config
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - args:
+          - |
+            chmod -R 744 /etc/datadog-agent;
+            cp -r /etc/datadog-agent /opt
+          command:
+          - bash
+          - -c
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: init-volume
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent
+            name: config
+        nodeSelector:
+          kubernetes.io/os: linux
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: datadog-agent-cluster-agent
+        serviceAccountName: datadog-agent-cluster-agent
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: datadogrun
+        - emptyDir: {}
+          name: varlog
+        - emptyDir: {}
+          name: tmpdir
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-installinfo
+          name: installinfo
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: kubernetes_state_core.yaml.default
+              path: kubernetes_state_core.yaml.default
+            name: datadog-agent-cluster-agent-confd
+          name: confd
+        - emptyDir: {}
+          name: config
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      meta.helm.sh/release-name: datadog-agent
+      meta.helm.sh/release-namespace: beacon
+    creationTimestamp: "2023-10-31T10:13:08Z"
+    generation: 2
+    labels:
+      app: datadog-agent-cluster-agent
+      app.kubernetes.io/component: cluster-agent
+      app.kubernetes.io/instance: datadog-agent
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: datadog-agent
+      pod-template-hash: df86c4d79
+    name: datadog-agent-cluster-agent-df86c4d79
+    namespace: beacon
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: datadog-agent-cluster-agent
+      uid: a7333858-25b7-4cf3-89e3-ad89b189cf92
+    resourceVersion: "1120980"
+    uid: 94e31010-b6a1-40f3-820d-585afb0f5610
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: datadog-agent-cluster-agent
+        pod-template-hash: df86c4d79
+    template:
+      metadata:
+        annotations:
+          checksum/api_key: d3b2671b5510c5c71b626abc0b0d31ab3e7d7cf75f592bee1e4952da49333e58
+          checksum/application_key: 55ab17572f1d6fbb976392c3478a57f7b89d28f9fe4629498a84249f790c076c
+          checksum/clusteragent-configmap: 288fd13147a3afff311b82fe5ae37b4232e7a901c0b0f66db3849a0ef82b5b9d
+          checksum/clusteragent_token: 34cd0dbc48469cb96899fe787b90c2a18e7f5854f206306dfa6d5a8e76a5caac
+          checksum/install_info: 6ee9192469c0d9f864bd17f6d6adbf7b38a627d3baeb836cd62905a53aa29e7b
+        creationTimestamp: null
+        labels:
+          app: datadog-agent-cluster-agent
+          app.kubernetes.io/component: cluster-agent
+          app.kubernetes.io/instance: datadog-agent
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: datadog-agent
+          pod-template-hash: df86c4d79
+        name: datadog-agent-cluster-agent
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: datadog-agent-cluster-agent
+                topologyKey: kubernetes.io/hostname
+              weight: 50
+        automountServiceAccountToken: true
+        containers:
+        - env:
+          - name: DD_POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: DD_HEALTH_PORT
+            value: "5556"
+          - name: DD_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: api-key
+                name: datadog-agent
+                optional: true
+          - name: KUBERNETES
+            value: "yes"
+          - name: DD_SITE
+            value: datadoghq.com
+          - name: DD_APP_KEY
+            valueFrom:
+              secretKeyRef:
+                key: app-key
+                name: datadog-agent-appkey
+          - name: DD_EXTERNAL_METRICS_PROVIDER_ENABLED
+            value: "true"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_PORT
+            value: "8443"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_WPA_CONTROLLER
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_PROVIDER_USE_DATADOGMETRIC_CRD
+            value: "false"
+          - name: DD_EXTERNAL_METRICS_AGGREGATOR
+            value: avg
+          - name: DD_ADMISSION_CONTROLLER_ENABLED
+            value: "true"
+          - name: DD_ADMISSION_CONTROLLER_WEBHOOK_NAME
+            value: datadog-webhook
+          - name: DD_ADMISSION_CONTROLLER_MUTATE_UNLABELLED
+            value: "false"
+          - name: DD_ADMISSION_CONTROLLER_SERVICE_NAME
+            value: datadog-agent-cluster-agent-admission-controller
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_MODE
+            value: socket
+          - name: DD_ADMISSION_CONTROLLER_INJECT_CONFIG_LOCAL_SERVICE_NAME
+            value: datadog-agent
+          - name: DD_ADMISSION_CONTROLLER_FAILURE_POLICY
+            value: Ignore
+          - name: DD_ADMISSION_CONTROLLER_PORT
+            value: "8000"
+          - name: DD_REMOTE_CONFIGURATION_ENABLED
+            value: "false"
+          - name: DD_CLUSTER_CHECKS_ENABLED
+            value: "true"
+          - name: DD_EXTRA_CONFIG_PROVIDERS
+            value: kube_endpoints kube_services
+          - name: DD_EXTRA_LISTENERS
+            value: kube_endpoints kube_services
+          - name: DD_LOG_LEVEL
+            value: INFO
+          - name: DD_LEADER_ELECTION
+            value: "true"
+          - name: DD_LEADER_ELECTION_DEFAULT_RESOURCE
+            value: configmap
+          - name: DD_LEADER_LEASE_NAME
+            value: datadog-agent-leader-election
+          - name: DD_CLUSTER_AGENT_TOKEN_NAME
+            value: datadog-agenttoken
+          - name: DD_COLLECT_KUBERNETES_EVENTS
+            value: "true"
+          - name: DD_CLUSTER_AGENT_KUBERNETES_SERVICE_NAME
+            value: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_AUTH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: datadog-agent-cluster-agent
+          - name: DD_CLUSTER_AGENT_COLLECT_KUBERNETES_TAGS
+            value: "false"
+          - name: DD_KUBE_RESOURCES_NAMESPACE
+            value: beacon
+          - name: CHART_RELEASE_NAME
+            value: datadog-agent
+          - name: AGENT_DAEMONSET
+            value: datadog-agent
+          - name: CLUSTER_AGENT_DEPLOYMENT
+            value: datadog-agent-cluster-agent
+          - name: DD_ORCHESTRATOR_EXPLORER_ENABLED
+            value: "true"
+          - name: DD_ORCHESTRATOR_EXPLORER_CONTAINER_SCRUBBING_ENABLED
+            value: "true"
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /live
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: cluster-agent
+          ports:
+          - containerPort: 5005
+            name: agentport
+            protocol: TCP
+          - containerPort: 5000
+            name: agentmetrics
+            protocol: TCP
+          - containerPort: 8443
+            name: metricsapi
+            protocol: TCP
+          - containerPort: 8000
+            name: datadog-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /ready
+              port: 5556
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent/run
+            name: datadogrun
+          - mountPath: /var/log/datadog
+            name: varlog
+          - mountPath: /tmp
+            name: tmpdir
+          - mountPath: /etc/datadog-agent/install_info
+            name: installinfo
+            readOnly: true
+            subPath: install_info
+          - mountPath: /conf.d
+            name: confd
+            readOnly: true
+          - mountPath: /etc/datadog-agent
+            name: config
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - args:
+          - |
+            chmod -R 744 /etc/datadog-agent;
+            cp -r /etc/datadog-agent /opt
+          command:
+          - bash
+          - -c
+          image: gcr.io/datadoghq/cluster-agent:7.48.1
+          imagePullPolicy: IfNotPresent
+          name: init-volume
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/datadog-agent
+            name: config
+        nodeSelector:
+          kubernetes.io/os: linux
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: datadog-agent-cluster-agent
+        serviceAccountName: datadog-agent-cluster-agent
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: datadogrun
+        - emptyDir: {}
+          name: varlog
+        - emptyDir: {}
+          name: tmpdir
+        - configMap:
+            defaultMode: 420
+            name: datadog-agent-installinfo
+          name: installinfo
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: kubernetes_state_core.yaml.default
+              path: kubernetes_state_core.yaml.default
+            name: datadog-agent-cluster-agent-confd
+          name: confd
+        - emptyDir: {}
+          name: config
+  status:
+    observedGeneration: 2
+    replicas: 0
+kind: List
+metadata:
+  resourceVersion: ""
