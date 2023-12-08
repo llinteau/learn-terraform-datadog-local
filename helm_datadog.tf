@@ -13,13 +13,13 @@ resource "helm_release" "datadog_agent" {
 
 # Use this to reference the custom yaml file with our unique
 # settings to be changed from defaults.
-  values = [
-    file("datadog.values.yml"),
+#  values = [
+#    file("datadog.values.yml"),
 #    templatefile("${path.root}/templates/datadog.env.yml.tpl", {
 #      region       = local.region
 #      cluster_name = var.cluster_name
 #    })
-  ]
+#  ]
 
   set_sensitive {
     name  = "datadog.apiKey"
