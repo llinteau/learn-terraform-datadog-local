@@ -4,10 +4,12 @@
 
 
 datadog:
-  apiKeyExistingSecret: datadog-keys
+  # apiKeyExistingSecret: datadog-keys
   # We are using the FEDRAMP Datadog for Government Site. 
   # See more about Datadog Sites https://docs.datadoghq.com/getting_started/site/
-  site: ddog-gov.com
+  # Using my lab for testing at commercial site
+  # site: ddog-gov.com
+  site: datadoghq.com
 
 
 # proxy:
@@ -21,6 +23,7 @@ datadog:
   # datadog.apm.socketEnabled -- Enable APM over Socket (Unix Socket or windows named pipe)
   apm:
     portEnabled: true
+
 
 
   ## datadog.serviceMonitoring.enabled -- Enable Universal Service Monitoring
@@ -87,6 +90,27 @@ datadog:
   kubeStateMetricsCore:
     enabled: true
   
+    # datadog.kubeStateMetricsCore.labelsAsTags -- Extra labels to collect from resources and to turn into datadog tag.
+
+    ## It has the following structure:
+     labelsAsTags:
+    ##   <resource1>:        # can be pod, deployment, node, etc.
+         lysettekuberneteslabel: skate_tags_manual_yamlfileentry  # where <label1> is the kubernetes label and <tag1> is the datadog tag
+    ##     <label2>: <tag2>
+    ##   <resource2>:
+    ##     <label3>: <tag3>
+    ##
+    labelsAsTags: {}
+      pod:
+        app: manual_labelastags_yamlfileentry
+    #  node:
+    #    zone: zone
+    #    team: team
+
+    # datadog.kubeStateMetricsCore.annotationsAsTags -- Extra annotations to collect from resources and to turn into datadog tag.
+
+
+
   
   ## kubelet configuration
   # datadog.kubelet.host -- Override kubelet IP
