@@ -8,7 +8,7 @@ resource "helm_release" "datadog_agent" {
   name       = "datadog-agent"
   chart      = "datadog"
   repository = "https://helm.datadoghq.com"
-  version    = "3.49.7"
+  version    = "3.56.0"
   namespace  = kubernetes_namespace.beacon.id
 
 # Use this to reference the custom yaml file with our unique
