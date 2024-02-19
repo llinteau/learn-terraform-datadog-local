@@ -7,13 +7,13 @@ variable "application_name" {
 variable "tfc_org" {
   type        = string
   description = "TFC Workspace"
-  default     = "LYSETTE_ORG2"
+  default     = "Lysette_Lab2"
 }
 
 variable "tfc_workspace" {
   type        = string
   description = "TFC Workspace"
-  default     = "learn-terraform-eks"
+  default     = "lysettes-workspace"
 }
 
 variable "datadog_api_key" {
